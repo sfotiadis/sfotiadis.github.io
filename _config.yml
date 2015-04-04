@@ -10,7 +10,7 @@ markdown: redcarpet
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Stathis Fotiadis
+title : Personal website
 tagline: "Using silicon based machines to serve carbon based ones"
 description: "On the quest of understanding human and machine intelligence"
 author :
@@ -104,6 +104,13 @@ JB :
     provider : google 
     google : 
         tracking_id : 'UA-61546452-1'
+    getclicky :
+      site_id : 
+    mixpanel :
+        token : '_MIXPANEL_TOKEN_'
+    piwik :
+        baseURL : 'myserver.tld/piwik' # Piwik installation address (without protocol)
+        idsite : '1'                   # the id of the site on Piwik
 
   # Settings for sharing helper. 
   # Sharing is for things like tweet, plusone, like, reddit buttons etc.
