@@ -8,11 +8,12 @@ highlighter: pygments
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Machine Learning.
-tagline: Humans are considered machines
+title : Stathis Fotiadis
+tagline: On the quest of understanding human and machine intelligence
+description: On the quest of understanding human and machine intelligence
 author :
   name : Stathis Fotiadis
-  email : sfotiadis@gmail.com
+  email : 
   github : sfotiadis
   twitter : sfotiadis_
   feedburner : feedname
