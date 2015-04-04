@@ -1,0 +1,15 @@
+---
+layout: post
+title: Matlab API for Hokuyo UTM-30LX-EW
+date: '2012-10-09T15:17:00.000+02:00'
+author: kabamaru
+tags:
+- hokuyo
+- matlab
+modified_time: '2013-09-06T15:00:16.456+02:00'
+thumbnail: http://2.bp.blogspot.com/-2_B8koG2HhI/UHQjnlPPw1I/AAAAAAAAAY0/jo3gWRknavw/s72-c/Captura+de+pantalla+2012-10-09+a+la(s)+15.13.48.png
+blogger_id: tag:blogger.com,1999:blog-950788785801424157.post-6355318400845528219
+blogger_orig_url: http://blog.fotiad.is/2012/10/matlab-api-for-hokuyo-utm-30lx-ew.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on"><a href="http://2.bp.blogspot.com/-2_B8koG2HhI/UHQjnlPPw1I/AAAAAAAAAY0/jo3gWRknavw/s1600/Captura+de+pantalla+2012-10-09+a+la(s)+15.13.48.png" imageanchor="1" style="clear: right; float: right; margin-bottom: 1em; margin-left: 1em;"><img border="0" height="253" src="http://2.bp.blogspot.com/-2_B8koG2HhI/UHQjnlPPw1I/AAAAAAAAAY0/jo3gWRknavw/s400/Captura+de+pantalla+2012-10-09+a+la(s)+15.13.48.png" width="400" /></a>We recently acquired a new Hokuyo UTM-30LX-EW laser range finder. It's based on the old UTM-30LX laser so that means it has an effective range of 30m and 270 degrees. The only differences with the previous model are:<br /><br /><ul style="text-align: left;"><li>Ethernet connection instead of USB</li><li>Multi-echo functionality, very helpful for outdoors</li></ul><div>Anyway since it's a fairly new laser, I couldn't find any drivers or API to use with matlab. So I decided to write my own. It's very simple and the only thing it does is initialize a connection to the laser and then starts grabbing the data. It also incorporates decoding and error detection functions. The code runs at almost 40hz. You can find it uploaded at&nbsp;<a href="http://www.mathworks.com/matlabcentral/fileexchange/37613-hokuyo-utm-30-lx-ew-for-matlab" target="_blank">mathworks file exchange</a>.<br /><br /><b>UPDATE:</b><br />My friend Ana form KIT has upgraded the API with the capability to also return intensities and multi-echo data. You can find it <a href="http://www.mathworks.com/matlabcentral/fileexchange/42584-hokuyo-utm-30lx-ew-matlab-api" target="_blank">here</a>.</div></div>
