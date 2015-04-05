@@ -18,10 +18,10 @@ I'm also very interested in machine learning and neuroscience. What fascinates m
 
 ## Around the web
 
-* [Linkedin](https://www.linkedin.com/in/stathisfotiadis)
-* [Twitter](https://twitter.com/sfotiadis_)
-* [Github](https://github.com/sfotiadis)
-* [Stack Overflow](http://stackoverflow.com/users/1857521/sfotiadis)
+Check my CV at [Linkedin](https://www.linkedin.com/in/stathisfotiadis).<br>
+Follow me on [Twitter](https://twitter.com/sfotiadis_).<br>
+Fork my code on [Github](https://github.com/sfotiadis).<br>
+Read my answers and questions at [Stack Overflow](http://stackoverflow.com/users/1857521/sfotiadis).
 
 ## Recent blog posts
 
