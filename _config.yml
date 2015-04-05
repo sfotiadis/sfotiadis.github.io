@@ -5,7 +5,7 @@ permalink: /:categories/:title
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 highlighter: pygments
 
-markdown: redcarpet
+markdown: kramdown
 
 # Custom gems
 gems:
