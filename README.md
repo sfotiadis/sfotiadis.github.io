@@ -1,6 +1,6 @@
-# [blog.fotiad.is](http://blog.fotiad.is)
+# [fotiad.is](http://fotiad.is)
 
-This repo holds the data for my personal blog.
+This repo holds the data for my personal website.
 It is automatically rendered by [Jekyll](http://github.com/mojombo/jekyll) whenever a commit is pushed.
 
 Hosted in [sfotiadis.github.io](http://sfotiadis.github.io)
