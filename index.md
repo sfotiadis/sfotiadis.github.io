@@ -4,7 +4,9 @@ title: Welcome
 ---
 {% include JB/setup %}
 
-<h2>Using silicon based machines to serve carbon based ones</h2>
+![photo of Stathis in Alhambra](assets/images/stathis.jpg){: .inset .right style="width: 120px"}
+
+# *Using silicon based machines to serve carbon based ones.*
 
 I'm Stathis, welcome to my personal website. 
 
