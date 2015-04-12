@@ -20,23 +20,20 @@ I'm also very interested in machine learning and neuroscience. What fascinates m
 
 ## Around the web
 
-Check my cv on Linked<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
-<script type="IN/MemberProfile" data-id="https://www.linkedin.com/in/stathisfotiadis" data-format="hover" data-related="false"></script>.
-<br>
+Check my cv on Linkedin
+<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+<script type="IN/MemberProfile" data-id="https://www.linkedin.com/in/stathisfotiadis" data-format="inline" data-related="false"></script>
 
-Follow me on twitter<br>
+Follow me on twitter
  <a class="twitter-timeline" href="https://twitter.com/sfotiadis_" height="2em" data-widget-id="586226304086847488" data-chrome="nofooter noborders noscrollbar transparent noheader" data-tweet-limit="1" data-show-replies="false">Tweets by @sfotiadis_</a>
  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-<br>
 
-Read my answers and questions at [Stack Overflow](http://stackoverflow.com/users/1857521/sfotiadis)<br>
+Read my answers and questions at Stack Overflow
 <a href="http://stackoverflow.com/users/1857521/sfotiadis">
 <img src="http://stackoverflow.com/users/flair/1857521.png?theme=clean" width="208" height="58" alt="profile for sfotiadis at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for sfotiadis at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
 </a>
 
 Fork my code on [Github](https://github.com/sfotiadis).<br>
-
-
 
 ## Recent blog posts
 
