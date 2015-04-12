@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A comparison of NLP open source tools for sentiment analysis
+title: "yenlp: comparison of open source tools for sentiment analysis on Yelp's dataset"
 date: '2015-01-20T17:40:00.000+02:00'
 author: kabamaru
 tags:
@@ -9,6 +9,8 @@ tags:
 - java
 - open source
 ---
+
+*Note: The code can be found on [github](https://github.com/sfotiadis/yenlp).*
 
 # Goal
 
