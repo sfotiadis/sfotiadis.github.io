@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "A comparison of open source tools for sentiment analysisg"
+title: "A comparison of open source tools for sentiment analysis"
 date: '2015-04-12T17:40:00.000+02:00'
 author: kabamaru
 tags:
