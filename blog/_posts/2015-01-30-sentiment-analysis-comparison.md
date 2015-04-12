@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "yenlp: comparison of open source tools for sentiment analysis on Yelp's dataset"
-date: '2015-01-20T17:40:00.000+02:00'
+date: '2015-01-30T17:40:00.000+02:00'
 author: kabamaru
 tags:
 - nlp
