@@ -17,7 +17,7 @@ The objective of this project is to apply various NLP sentiment analysis techniq
 ### Yelp Dataset Challenge
 
 Yelp has released an anonymized part of their stored data to the public. This was accompanied by 
-[a challenge] (http://www.yelp.com/dataset_challenge) with various awards in order to incentivize research 
+[a challenge](http://www.yelp.com/dataset_challenge) with various awards in order to incentivize research 
 and generate insights for the use of the data. 
 
 Here follows a brief explanation of the dataset, from their website.
@@ -71,7 +71,7 @@ Sentiment analysis can be done through the lexical analysis of text. **Pros:** T
 
 The main steps of this techique are shown in the following diagram. This procedure was formulated in ["Reviews Classification Using SentiWordNet Lexicon"](http://www.academia.edu/1336655/Reviews_Classification_Using_SentiWordNet_Lexicon) by A. Hamouda and M. Rohaim.
 
-![flow of sentiwordnet](/assets/images/nlp/sentiwordnet-flowchart.png)
+![flow of sentiwordnet](/assets/images/nlp/sentiwordnet-flowchart.png){: style="width: 100%"}
 
 The sentence is tokenized and each token is assigned a part-of-speech tag. The POS tag can be adjective, noun, verb etc. A comprehensive list can be found [here](https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html). 
 
@@ -130,7 +130,7 @@ We ran the naive bayes on various sample quantities and for the four differenct 
 |10000	|0.740|	0.816	|0.811| 0.861
 |20000	|0.780|	0.850|	0.852| 0.894
 
-![naive bayes accuracy chart](/assets/images/nlp/naive-bayes-accuracy.png)
+![naive bayes accuracy chart](/assets/images/nlp/naive-bayes-accuracy.png){: style="width: 100%"}
 
 We can see that using stopwords improves the results in the whole range of number of samples. Also using stopword and bigrams provide similar results when the sample number is high. The best results are achieved by the combination of stopwords removal and bigrams.
 
@@ -245,74 +245,8 @@ Comparing the three aggregation methods we see that the weighted averages gives 
 
 ### Comparison
 
-![comparison](/assets/images/nlp/comparison-0.5.png)
+![comparison](/assets/images/nlp/comparison-0.5.png){: style="width: 100%"}
 
 In these experiments it seems that the the Naive Bayes classifier gave the best overall results. This is expected since it was trained with samples from the the Yelp dataset. The SentiWordNet results where somewhat dissapointing, barely better than random guessing. CoreNLP gave rather good results, given that it came pretrained, but it's accuracy for the positive class was marginally better than random guessing.
 
 All the methods were timed. Naive Bayes was much faster (even including training time), SentiWordNet was slower by an order of magnitude and CoreNLP was even slower by another order of magnitude.
-
-## Usage
-
-The code can be found in [github](). A brief explanation on how to run the code.
-
-### Dependencies
-
-Make sure you have the following libraries installed before running the code.
-
-* [NLTK](http://www.nltk.org)
-* [Scikit-Learn](http://scikit-learn.org/stable/install.html)
-* [Numpy](http://www.numpy.org)
-* [Stanford CoreNLP](http://nlp.stanford.edu/software/corenlp.shtml)
-* [JSON Simple](https://code.google.com/p/json-simple/)
-
-Also you must have installed the *stopword corpora* of NLTK.
-To bring up the NLTK downloader, run the following in a python console.
-
-```
-import nltk
-nltk.download()
-```
-
-### Extracting reviews
-
-**This must be done before runing any of the classifiers below.**
-
-You need to provide the category of the businesses and the quantity of samples for each review class (pos/neg).
-The script creates two json files one for each class.
-
-```
-python extract_reviews.py 'Restaurants' 1000
-```
-
-### Naive Bayes
-
-You need to provide the category, the number of samples for each class and the number of folds for the k-fold cross validation.
-It trains one classifier for each feature extraction filter (single words, stopwords removal, bigrams, bigrams & stopwords removal) and prints the overall accuracy.
-
-```
-python run_bayes 'Restaurants' 1000 2
-```
-
-### SentiwordNet
-
-You only need to provided the category and the number of samples. 
-
-
-```
-python run_sentiwordnet 'Restaurants' 1000
-```
-
-### CoreNLP
-
-You need to add to java's classpath the path to the simple-json and corenlp jar.
-First compile the ```corenlp.java``` file to create the class.
-
-```
-javac -cp ".:PATH_TO_SIMPLE_JSON/*:PATH_TO_CORENLP/*" -d . corenlp.java 
-```
-
-Then run the compiled class providing the category and number of samples.
-
-```
-java -cp ".:PATH_TO_SIMPLE_JSON/*:PATH_TO_CORENLP/*" corenlp restaurants 1000
-```
