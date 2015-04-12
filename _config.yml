@@ -7,6 +7,9 @@ highlighter: pygments
 
 markdown: kramdown
 
+kramdown:
+  input: GFM
+
 # Custom gems
 gems:
     - jekyll-redirect-from
