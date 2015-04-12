@@ -10,15 +10,13 @@ tags:
 - open source
 ---
 
-### Goal
+# Goal
 
 The objective of this project is to apply various NLP sentiment analysis techniques on reviews of the [Yelp Dataset](http://www.yelp.com/dataset_challenge) and assess their effectivenes on correctly identifiyng them as positive or negative.
 
-### Yelp Dataset Challenge
+# Yelp Dataset Challenge
 
-Yelp has released an anonymized part of their stored data to the public. This was accompanied by 
-[a challenge](http://www.yelp.com/dataset_challenge) with various awards in order to incentivize research 
-and generate insights for the use of the data. 
+Yelp has released an anonymized part of their stored data to the public. This was accompanied by [a challenge](http://www.yelp.com/dataset_challenge) with various awards in order to incentivize research and generate insights for the use of the data. 
 
 Here follows a brief explanation of the dataset, from their website.
 
@@ -36,13 +34,13 @@ The Challenge Dataset includes data from Phoenix, Las Vegas, Madison, Waterloo a
 
 This project is not a participation in the challenge. 
 
-### Review extraction
+# Review extraction
 
 The reviews in the Yelp dataset are stored in a single json file. To extract the reviews a parser has been implemented. It takes as input a business category and a number of samples for each category (positive/negative). 
 
 First I extracted the anonymized ids for all the businesses that belong to the requested category. These ids are found in a different file than the reviews. Then I parsed the reviews and extract the requested amount of positive and negative reviews. A review is considered positive when the rating is of 4 or 5 stars and negative when it has 1 or 2 start. *Ratings of 3 stars are not taken into account.* The reviews are saved for future processing to two distinct files, one for each class.
 
-### Classification Techniques
+# Classification Techniques
 
 Three different techniques will be assesed and compared:
 
@@ -52,7 +50,7 @@ Three different techniques will be assesed and compared:
 
 Only a subset of the dataset will be used.
 
-### Train a classifier using the dataset
+## Train a classifier using the dataset
 
 The training on the dataset is done using the *bag of words* model and a NaiveBayes classifier. The evaluation of the classifier is done by stratified k-fold cross validation. Also the samples are randomly shuffled for each run.
 
@@ -65,7 +63,7 @@ Three different feature extraction algorithms where implemented:
 
 For the bigrams extraction all the bigrams are computed and the *n* best are selected according to an association measure. By default *n = 500* and the metric is based on the [Chi-square test](http://en.wikipedia.org/wiki/Chi-square_test).
 
-### Classify using generic lexicons
+## Classify using generic lexicons
 
 Sentiment analysis can be done through the lexical analysis of text. **Pros:** The advantage of this technique is that it doesn't require any training and can be applied to any text without any *a priori* knowledge of the domain. **Cons:** On the other hand this technique utilizes heavier sentence manipulation and requires pre-constructed lexicons.
 
@@ -103,7 +101,7 @@ Next you can see an example of the objective, positive and negative score for ea
 
 Another WSD technique was adapted from another open source [sentiment classifier](http://pythonhosted.org/sentiment_classifier) for twitter. This one was very slow and wasn't considered at all in the results.
 
-### A pretrained state-of-the-art system
+## CoreNLP: A pretrained state-of-the-art system
 
 Stanford's [CoreNLP](http://nlp.stanford.edu/sentiment/code.html) integrates many tools for doing NLP in a cohesive library. It is written in Java and provides a part-of-speech (POS) tagger, a named entity recognizer (NER), a parser, a coreference resolution system, sentiment analysis, and bootstrapped pattern learning tools.
 
@@ -118,7 +116,7 @@ The estimation of the whole review's sentiment score is done by aggregating the 
 
 All the results regard the reviews of restaurants. The reviews are extracted in series from the dataset. That means that the experiment with 2000 samples contains the first 1000 positive and the first 1000 negative reviews and so on.
 
-### Naive Bayes
+## Naive Bayes
 
 We ran the naive bayes on various sample quantities and for the four differenct feature extraction algorithms. The results of the accuracy can be found in the following table and graph.
 
@@ -146,9 +144,9 @@ As seen in the following table each run of the single words and the stopword rem
 |Bigrams	| 7m 51s|	
 |Bigrams & Stopwords| 6m 13s|
 
-It's also interesting to see which where the most informative features in each case. Thesee are the feature with the most discrimitative power.
+It's also interesting to see which where the most informative features in each case. These are the feature with the most discrimitative power.
 
-#### Single Words
+**Single Words**
 
 ```
 Most Informative Features
@@ -164,7 +162,7 @@ Most Informative Features
                    worst = True              neg : pos    =     22.6 : 1.0
 ```
                   
-#### Stopwords Removal
+**Stopwords Removal**
 
 ```
 Most Informative Features
@@ -181,7 +179,7 @@ Most Informative Features
 
 ```
 
-#### Bigrams
+**Bigrams**
 
 ```
 Most Informative Features
@@ -197,7 +195,7 @@ Most Informative Features
          (u'rude', u'.') = True              neg : pos    =     33.0 : 1.0
 ```
 
-#### Bigrams & Stopwords
+**Bigrams & Stopwords**
 
 ```
                tasteless = True              neg : pos    =     48.6 : 1.0
@@ -215,7 +213,7 @@ Most Informative Features
 
 It's evident that most of the features characterize negative sentiments. 
 
-### WordNet & SentiWordNet
+## WordNet & SentiWordNet
 
 The results for the SentiWordNet approach can be found in the following table.
 
@@ -227,7 +225,7 @@ The results for the SentiWordNet approach can be found in the following table.
 
 Comparing the two WSD approaches it becomes apparent that using the sentence as the context the results are better and more robust. This confirms the original hypothesis that the sentence provides more relevant information for word sense disambiguation than the whole review.
 
-### Stanford's CoreNLP
+## Stanford's CoreNLP
 
 The samples (positive and negative) are read from the same files that were created by ```python```. Since they are formated in json there is no need to recreate them. 
 
@@ -243,7 +241,7 @@ From the results it becomes evident that CoreNLP gives better results for the ne
 
 Comparing the three aggregation methods we see that the weighted averages gives the best overall results and also the best results for the negative class. The simple average gives better results for the positive class. 
 
-### Comparison
+# Comparison
 
 ![comparison](/assets/images/nlp/comparison-0.5.png){: style="width: 100%"}
 
