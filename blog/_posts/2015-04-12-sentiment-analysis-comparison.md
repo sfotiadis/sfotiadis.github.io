@@ -77,7 +77,7 @@ The main steps of this techique are shown in the following diagram. This procedu
 
 The sentence is tokenized and each token is assigned a part-of-speech tag. The POS tag can be adjective, noun, verb etc. A comprehensive list can be found [here](https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html). 
 
-Since a word can have muliple senses(or meanings), a word sense disambiguation(WSD) process is needed. A technique for doing this was adapted from a [twitter sentiment analysis tool](www.slideshare.net/faigg/tutotial-of-sentiment-analysis). It makes use of WordNet which provides various senses for a word and each sense's definition. For example for the word *good* as a noun, WordNet contains the following senses and their definitions:
+Since a word can have muliple senses(or meanings), a word sense disambiguation(WSD) process is needed. A technique for doing this was adapted from a [twitter sentiment analysis tool](http://www.slideshare.net/faigg/tutotial-of-sentiment-analysis). It makes use of WordNet which provides various senses for a word and each sense's definition. For example for the word *good* as a noun, WordNet contains the following senses and their definitions:
 
 ```
   Sense        Description
